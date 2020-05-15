@@ -1,0 +1,123 @@
+:root {
+    --primary-one: hsl(179, 62%, 43%);
+    --primary-two: hsl(71, 73%, 54%);
+    --secondary-one: hsl(204, 43%, 93%);
+    --secondary-two: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    background: var(--secondary-one);
+}
+
+.boxes {
+    display: grid;
+    grid-template-areas:
+        "join join"
+        "subscription why";
+    justify-content: center;
+    padding: 200px;
+}
+
+.join {
+    padding: 20px;
+    background: #ffffff;
+    grid-area: join;
+}
+
+.subscription {
+    padding: 20px;
+    background: var(--primary-one);
+    color: #ffffff;
+    grid-area: subscription;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.why {
+    padding: 20px;
+    background: hsl(179, 59%, 51%);
+    color: #ffffff;
+    grid-area: why;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.join h1 {
+    color: var(--primary-one);
+    margin-bottom: 10px;
+}
+
+.join h2 {
+    color: var(--primary-two);
+    margin-bottom: 10px;
+}
+
+.join p {
+    color: var(--secondary-two);
+}
+
+.subscription h1,
+.why h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.subscription span {
+    font-size: 2rem;
+}
+
+.subscription p {
+    margin-bottom: 10px;
+}
+
+.subscription a {
+    background-color: var(--primary-two);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 250ms ease-in;
+}
+
+.subscription a:hover {
+    transform: scale(0.95);
+    background-color: hsl(71, 63%, 47%);
+}
+
+.why ul li {
+    list-style: none;
+}
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 375px) {
+    .boxes {
+        grid-template-areas:
+            "join"
+            "subscription"
+            "why";
+        padding: 20px;
+    }
+}
